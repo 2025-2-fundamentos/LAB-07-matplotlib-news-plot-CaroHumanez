@@ -44,7 +44,7 @@ def pregunta_01():
         }
     }
 
-    # Configurar gráfico
+    # Configurar ghphico
     plt.figure(figsize=(8, 6))
 
     for label, info in data.items():
@@ -56,7 +56,7 @@ def pregunta_01():
             marker=info.get("marker", None)
         )
 
-        # Etiqueta inicial (2001)
+    
         plt.text(
             years[0], info["values"][0],
             f"{label} {info['values'][0]}%",
@@ -81,6 +81,6 @@ def pregunta_01():
     plt.yticks([])
     plt.box(False)
 
-    # Guardar gráfico
+    # save
     plt.savefig("files/plots/news.png", bbox_inches="tight")
-    plt.close()
+    plt.close() 
